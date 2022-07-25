@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PokeApp.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,9 @@ namespace PokeApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new LoginPage());
+            //Aplication.Current.Properties["key"] = value;
+
         }
 
         protected override void OnStart()

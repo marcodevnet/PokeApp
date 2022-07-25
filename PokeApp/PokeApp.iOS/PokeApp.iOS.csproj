@@ -133,4 +133,10 @@
       <Name>PokeApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Fondo.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pikachu.jpg" />
+  </ItemGroup>
 </Project>
