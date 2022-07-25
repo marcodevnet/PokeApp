@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:PokeApp.Controls"
+             x:Class="PokeApp.Views.LoginPage">
+    <Grid Padding="20" RowSpacing="20" BackgroundColor="Black">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+
+        <Image
+            Grid.Row="0"
+            HeightRequest="300"
+            HorizontalOptions="Center"
+            Source="pikachu"
+            WidthRequest="300" />
+
+        <Label
+            Grid.Row="1"
+            FontAttributes="Bold"
+            FontSize="Medium"
+            Text="LOGIN"
+            TextColor="White"
+            HorizontalTextAlignment="Center"/>
+
+        <controls:StandardEntry
+            Grid.Row="2"
+            Padding="13"
+            BackgroundColor="#31FFFFFF"
+            BorderColor="White"
+            BorderThickness="1"
+            CornerRadius="8"
+            Placeholder = "Email" 
+            Text="{Binding Email}"  
+            PlaceholderColor="White"
+            TextColor="White"/>
+
+        <controls:StandardEntry
+            Grid.Row="3"
+            Margin="0,0,0,20"
+            Padding="13"
+            BackgroundColor="#31FFFFFF"
+            BorderColor="White"
+            BorderThickness="1"
+            CornerRadius="8"
+            IsPassword="True"
+            Text="{Binding Password}" 
+            Placeholder = "Password"
+            PlaceholderColor="White"
+            TextColor="White"/>
+
+        <Button
+            Grid.Row="4"
+            BackgroundColor="White"
+            CornerRadius="8"
+            Text="LOGIN"
+            TextColor="Black"
+            TranslationY="-20" 
+            Command="{Binding LoginCommand}"  />
+    </Grid>
+</ContentPage>
